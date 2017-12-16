@@ -20,6 +20,11 @@ RUN apt clean
 ADD https://commondatastorage.googleapis.com/git-repo-downloads/repo /usr/local/bin/
 RUN chmod 755 /usr/local/bin/repo
 
+
+# Add build tool
+ADD _aosp.sh /usr/local/bin/aosp
+RUN chmod +x /usr/local/bin/aosp
+
 #create user and folder
 VOLUME /aosp
 VOLUME /ccache
@@ -33,5 +38,4 @@ WORKDIR /aosp
 ENV USE_CCACHE=1
 ENV CCACHE_DIR=/ccache
 
-COPY _aosp.sh /usr/local/bin/aosp
 
