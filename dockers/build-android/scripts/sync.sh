@@ -4,4 +4,4 @@ then
   exit 1
 fi
 
-../run.sh "cd $1; repo sync -j8"
+sudo docker run -w /aosp/$1 -v $(pwd)/ccache:/ccache -v $(pwd)/android:/aosp android-build:latest repo sync -j8

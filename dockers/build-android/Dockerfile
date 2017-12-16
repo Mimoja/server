@@ -33,4 +33,5 @@ WORKDIR /aosp
 ENV USE_CCACHE=1
 ENV CCACHE_DIR=/ccache
 
+COPY _aosp.sh /usr/local/bin/aosp
 
