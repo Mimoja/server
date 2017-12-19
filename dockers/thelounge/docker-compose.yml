@@ -1,0 +1,10 @@
+thelounge:
+  build: .
+  container_name: thelounge
+  ports:
+    - "9000:9000"
+  restart: always
+  volumes:
+    - ./lounge-data:/lounge
+  command:
+    thelounge start
