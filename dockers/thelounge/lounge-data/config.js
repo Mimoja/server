@@ -21,7 +21,7 @@ module.exports = {
 	// @type     string
 	// @default  undefined
 	//
-	host: undefined, // "127.0.0.1",
+	host: undefined,// "127.0.0.1",
 
 	//
 	// Set the port to listen on.
@@ -43,6 +43,7 @@ module.exports = {
 	//
 	// Sets whether the server is behind a reverse proxy and should honor the
 	// X-Forwarded-For header or not.
+
 	//
 	// @type     boolean
 	// @default  false

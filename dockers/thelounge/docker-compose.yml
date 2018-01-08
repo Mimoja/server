@@ -2,7 +2,7 @@ thelounge:
   build: .
   container_name: thelounge
   ports:
-    - "9000:9000"
+    - "127.0.0.1:9000:9000"
   restart: always
   volumes:
     - ./lounge-data:/lounge
