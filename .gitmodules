@@ -1,3 +1,0 @@
-[submodule "dockers/stackedit/stackedit"]
-	path = dockers/stackedit/stackedit
-	url = https://github.com/benweet/stackedit
