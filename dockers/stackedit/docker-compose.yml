@@ -1,0 +1,7 @@
+stackedit:
+  build: stackedit
+  container_name: stackedit
+  ports:
+    - "127.0.0.1:9002:8080"
+  restart: always
+
