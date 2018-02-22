@@ -1,4 +1,4 @@
-#grafana:
+grafana:
   build: .
   container_name: grafana
   ports:
@@ -8,4 +8,4 @@
     - ./grafana-data/data:/var/lib/grafana
     - ./grafana-data/log:/var/log/grafana
     - ./grafana-data/config:/etc/grafana
-  command: "grafana-server -homepath /usr/share/grafana/ --pidfile=/var/run/grafana-server.pid --config=/etc/grafana/grafana.ini cfg:default.paths.provisioning=/etc/grafana/provisioning cfg:default.paths.data=/var/lib/grafana cfg:default.paths.logs=/var/log/grafana cfg:default.paths.plugins=/var/lib/grafana/plugins"
+  command: "grafana-server -homepath /usr/share/grafana/  --config=/etc/grafana/grafana.ini cfg:default.paths.provisioning=/etc/grafana/provisioning cfg:default.paths.data=/var/lib/grafana cfg:default.paths.logs=/var/log/grafana cfg:default.paths.plugins=/var/lib/grafana/plugins"
