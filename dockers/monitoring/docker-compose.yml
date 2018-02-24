@@ -8,3 +8,14 @@ grafana:
     - ./grafana-data/log:/var/log/grafana
     - ./grafana-data/config:/etc/grafana
   command: grafana-server  --config=/etc/grafana/grafana.ini -homepath /usr/share/grafana/ cfg:default.paths.provisioning=/etc/grafana/provisioning cfg:default.paths.data=/var/lib/grafana cfg:default.paths.logs=/var/log/grafana cfg:default.paths.plugins=/var/lib/grafana/plugins
+
+prometheus:
+  build: prometheus
+  ports:
+    - "127.0.0.1:9090:9090"
+  restart: always
+  volumes:
+    - ./prometheus-data/data:/prometheus
+    - ./prometheus-data/config:/etc/prometheus
+
+
