@@ -21,6 +21,4 @@ VOLUME /etc/grafana
 
 EXPOSE 3000
 
-ENTRYPOINT grafana-server
-CMD --config=/etc/grafana/grafana.ini -homepath /usr/share/grafana/ cfg:default.paths.provisioning=/etc/grafana/provisioning cfg:default.paths.data=/var/lib/grafana cfg:default.paths.logs=/var/log/grafana cfg:default.paths.plugins=/var/lib/grafana/plugins
 
