@@ -26,8 +26,8 @@ ADD _aosp.sh /usr/local/bin/aosp
 RUN chmod +x /usr/local/bin/aosp
 
 #create user and folder
-VOLUME /aosp
-VOLUME /ccache
+RUN mkdir /aosp
+RUN mkdir /ccache
 
 RUN useradd -d /home/aosp -m aosp
 RUN chown -R aosp /home/aosp /ccache /aosp

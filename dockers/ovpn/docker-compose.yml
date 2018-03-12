@@ -10,5 +10,3 @@ services:
     restart: always
     volumes:
      - ./openvpn-data/conf:/etc/openvpn
-    environment:
-     - DEBUG=1
