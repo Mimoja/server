@@ -1,0 +1,9 @@
+version: '2'
+services:
+  hledger-web:
+    build: .
+    ports:
+      - "127.0.0.1:9004:5000"
+    restart: always
+    volumes:
+      - ./hledger-data:/data
