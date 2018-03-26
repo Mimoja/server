@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  tinc:
+    build: .
+    ports:
+      - 655:655
+    restart: always
+    volumes:
+      - ./tinc-data:/etc/tinc
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
